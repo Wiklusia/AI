@@ -1,43 +1,37 @@
-/* Ogólne ustawienia */
 body {
-    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
-    background-image: url('tlo.png'); /* Przykładowa ścieżka */
+    background-image: url('tlo.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Utrzymuje tło w jednym miejscu przy przewijaniu */
+    background-attachment: fixed;
 }
 
-
-/* Nagłówek */
 header {
-    background-color: #ffffff; /* Białe tło */
-    color: #000080; /* Ciemnoniebieski */
+    background-color: #ffffff;
+    color: #000080;
     text-align: center;
     padding: 20px;
-    border-bottom: 5px solid #d4af37; /* Złoty akcent */
+    border-bottom: 5px solid #d4af37;
     width: 100%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lekki cień */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Główna treść */
 main {
     padding: 40px;
-    background-color: #f8f9fa; /* Bardzo jasnoszare tło */
-    border: 1px solid #d4af37; /* Złote akcenty */
+    background-color: #f8f9fa;
+    border: 5px dashed #d4af37;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Delikatny cień */
-    max-width: 1000px; /* Ograniczenie szerokości */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
     margin: 40px auto;
 }
 
-/* Nagłówki */
 h1 {
     font-size: 3em;
-    color: #000080; /* Ciemnoniebieski */
-    text-align: center; /* Wyśrodkowanie głównego nagłówka */
+    color: #000080;
+    text-align: center;
     margin-bottom: 20px;
-    border-bottom: 3px solid #d4af37; /* Złoty akcent */
+    border-bottom: 3px solid #d4af37;
     padding-bottom: 10px;
 }
 
@@ -49,18 +43,16 @@ h2 {
 
 h3 {
     font-size: 1.8em;
-    color: #db2511; /* Złoty akcent */
+    color: #db2511;
     margin-bottom: 10px;
 }
 
-/* Akapity */
 p {
     font-size: 1.2em;
     color: #000080;
     padding: 10px 0;
 }
 
-/* Lista */
 ul {
     list-style-type: circle;
     color: #000080;
@@ -68,32 +60,32 @@ ul {
 }
 
 ul li {
-    background-color: #f0f8ff; /* Jasnoniebieski */
+    background-color: #f0f8ff;
     padding: 10px;
     margin: 5px 0;
-    border-left: 5px solid #d4af37; /* Złote linie po lewej stronie */
+    border-left: 5px solid #d4af37;
     border-radius: 5px;
 }
 
-/* Stopka */
 footer {
     background-color: #ffffff;
     color: #000080;
     text-align: center;
     padding: 15px;
-    border-top: 5px solid #d4af37; /* Złoty akcent */
+    border-top: 5px solid #d4af37;
     width: 100%;
     margin-top: 30px;
 }
+
 .link {
-    color: #f5c600; /* Złoty kolor */
-    text-decoration: none; /* Bez podkreślenia */
+    color: #f5c600;
+    text-decoration: none;
 }
 
 .link:after {
-    content: "fate variant"; /* Dodanie tekstu po linku */
+    content: "fate variant";
 }
-/* Responsywność */
+
 @media (max-width: 800px) {
     main {
         padding: 20px;

@@ -1,15 +1,13 @@
-/* Ogólne ustawienia */
-/* Ogólne ustawienia */
 body {
     font-family: 'Garamond', serif;
-    background-color: #1f1f2e; /* Ciemny, elegancki kolor tła */
+    background-color: #1f1f2e;
     background-image: 
-        linear-gradient(rgba(31, 31, 46, 0.8), rgba(31, 31, 46, 0.99)), /* Gradient z przezroczystością */
-        url('tlo.png'); /* Twój obrazek w tle */
+        linear-gradient(rgba(31, 31, 46, 0.8), rgba(31, 31, 46, 0.99)),
+        url('tlo.png');
     background-size: cover;
     background-repeat: repeat;
     background-position: center;
-    color: #f5c600; /* Złoty kolor tekstu */
+    color: #f5c600;
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -18,31 +16,26 @@ body {
     min-height: 100vh;
 }
 
-
-/* Nagłówek */
 header {
-    background-color: #111122; /* Bardzo ciemny kolor */
-    color: #f5c600; /* Złoty tekst */
+    background-color: #111122;
+    color: #f5c600;
     text-align: left;
-   /* padding: 20px;*/
-    border-bottom: 2px solid #f5c600; /* Złoty pasek */
-    width: 100%; /* Ustawienie pełnej szerokości */
- /* Uwzględnia padding w szerokości */
+    border-bottom: 2px solid #f5c600;
+    width: 100%;
 }
 
-/* Główna treść */
 main {
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Wyśrodkowanie pionowe treści */
-    align-items: left; /* Wyśrodkowanie poziome treści */
-    text-align: left; /* Wyśrodkowanie tekstu */
+    justify-content: center;
+    align-items: left;
+    text-align: left;
     padding: 20px;
 }
 
 h1, h2 {
-    text-shadow: 2px 2px #000000; /* Lekki cień */
+    text-shadow: 2px 2px #000000;
 }
 
 h1 {
@@ -53,7 +46,7 @@ h1 {
 h2 {
     font-size: 2em;
     font-style: italic;
-    color: #ffcc00; /* Jaśniejszy złoty */
+    color: #ffcc00;
 }
 
 h3 {
@@ -66,38 +59,46 @@ p {
     order: 2;
     font-size: 1.1em;
     color: #f8d146;
-    max-width: 800px; /* Ograniczenie szerokości akapitów */
+    max-width: 800px;
+    border: 4px solid #111122;
+    padding: 10px;
+    margin: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
 }
 
-/* Lista */
 ul {
     order: 1;
     list-style-type: disc;
     color: #f5c600;
     padding-left: 20px;
-    max-width: 800px; /* Ograniczenie szerokości listy */
+    max-width: 800px;
 }
 
-/* Stopka */
 footer {
     background-color: #111122;
     color: #ffcc00;
     text-align: center;
-    /*padding: 20px;*/
     border-top: 2px solid #f5c600;
     position: relative;
     bottom: 0;
     width: 100%;
 }
+
+footer p {
+    border: none;
+    box-shadow: none;
+    background-color: inherit;
+}
+
 .link {
-    color: #db2511; /* Złoty kolor */
-    text-decoration: none; /* Bez podkreślenia */
+    color: #db2511;
+    text-decoration: none;
 }
 
 .link:after {
-    content: "nanoha variant"; /* Dodanie tekstu po linku */
+    content: "nanoha variant";
 }
-/* Responsywność */
+
 @media (max-width: 600px) {
     h1, h2 {
         font-size: 2em;
