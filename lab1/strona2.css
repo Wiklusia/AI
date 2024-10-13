@@ -1,0 +1,112 @@
+/* Ogólne ustawienia */
+body {
+    background-image: url('tlo.png'); /* Przykładowa ścieżka */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Utrzymuje tło w jednym miejscu przy przewijaniu */
+}
+
+
+/* Nagłówek */
+header {
+    background-color: #ffffff; /* Białe tło */
+    color: #000080; /* Ciemnoniebieski */
+    text-align: center;
+    padding: 20px;
+    border-bottom: 5px solid #d4af37; /* Złoty akcent */
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lekki cień */
+}
+
+/* Główna treść */
+main {
+    padding: 40px;
+    background-color: #f8f9fa; /* Bardzo jasnoszare tło */
+    border: 1px solid #d4af37; /* Złote akcenty */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Delikatny cień */
+    max-width: 1000px; /* Ograniczenie szerokości */
+    margin: 40px auto;
+}
+
+/* Nagłówki */
+h1 {
+    font-size: 3em;
+    color: #000080; /* Ciemnoniebieski */
+    text-align: center; /* Wyśrodkowanie głównego nagłówka */
+    margin-bottom: 20px;
+    border-bottom: 3px solid #d4af37; /* Złoty akcent */
+    padding-bottom: 10px;
+}
+
+h2 {
+    font-size: 2.5em;
+    color: #000080;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 1.8em;
+    color: #db2511; /* Złoty akcent */
+    margin-bottom: 10px;
+}
+
+/* Akapity */
+p {
+    font-size: 1.2em;
+    color: #000080;
+    padding: 10px 0;
+}
+
+/* Lista */
+ul {
+    list-style-type: circle;
+    color: #000080;
+    padding-right: 40px;
+}
+
+ul li {
+    background-color: #f0f8ff; /* Jasnoniebieski */
+    padding: 10px;
+    margin: 5px 0;
+    border-left: 5px solid #d4af37; /* Złote linie po lewej stronie */
+    border-radius: 5px;
+}
+
+/* Stopka */
+footer {
+    background-color: #ffffff;
+    color: #000080;
+    text-align: center;
+    padding: 15px;
+    border-top: 5px solid #d4af37; /* Złoty akcent */
+    width: 100%;
+    margin-top: 30px;
+}
+.link {
+    color: #f5c600; /* Złoty kolor */
+    text-decoration: none; /* Bez podkreślenia */
+}
+
+.link:after {
+    content: "fate variant"; /* Dodanie tekstu po linku */
+}
+/* Responsywność */
+@media (max-width: 800px) {
+    main {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+}
