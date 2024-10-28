@@ -1,0 +1,47 @@
+body {
+    font-family: 'Garamond', serif;
+    background-color: #1f1f2e;
+    background-image: 
+        linear-gradient(rgba(31, 31, 46, 0.8), rgba(31, 31, 46, 0.99));
+    color: #f5c600;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+input, button {
+    color: #111122;
+    margin: 5px;
+}
+
+.highlight {
+    background-color: darkred;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    position: relative;
+}
+
+button {
+    right: 10px;
+    top: 10px;
+    background-color: darkred;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(24, 20, 20);
+}
