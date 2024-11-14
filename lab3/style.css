@@ -1,0 +1,94 @@
+/* Podstawowy styl body */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Zmiana na flex-start, aby strona mogła się przewijać w pionie */
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f4f9;
+    overflow-x: hidden; /* Zapobiega przewijaniu poziomemu */
+}
+
+/* Kontener główny */
+#container {
+    display: flex;
+    flex-direction: column; /* Ustawienie elementów w kolumnie */
+    width: 100%; /* Kontener na pełną szerokość ekranu */
+    max-width: 1200px; /* Ograniczenie szerokości */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Zapobiega wyjściu elementów poza kontener */
+    margin-top: 20px;
+}
+
+/* Styl dla sekcji z mapą i puzzlami (będą obok siebie) */
+#mapAndPuzzle {
+    display: flex;
+    justify-content: space-between; /* Rozmieszczenie mapy i puzzli obok siebie */
+    width: 100%;
+    gap: 20px; /* Odstęp między mapą a puzzlami */
+    margin-bottom: 20px; /* Odstęp od przycisków */
+}
+
+/* Styl dla mapy */
+#map {
+    width: 500px; /* Mapa zajmuje 48% szerokości */
+    height: 500px; /* Wysokość mapy */
+    border-radius: 8px;
+    border: 2px solid #333;
+    box-sizing: border-box;
+}
+
+/* Styl dla puzzli */
+#puzzleBoard {
+    width: 500px; /* Puzzli zajmują 48% szerokości */
+    height: 500px; /* Wysokość puzzli */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1px; /* Odstęp między puzzlami */
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: 2px solid #333;
+}
+
+/* Styl pojedynczego elementu puzzle */
+.puzzle-piece {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #333;
+    border-radius: 4px;
+    cursor: grab;
+    box-sizing: border-box;
+}
+
+/* Styl dla przycisków */
+button {
+    display: inline-block;
+    padding: 10px 20px; /* Standardowa wielkość przycisku */
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    transition: background-color 0.3s ease;
+    margin: 10px 5px;
+}
+
+/* Efekt hover dla przycisków */
+button:hover {
+    background-color: #45a049;
+}
+
+/* Styl dla kontenera przycisków */
+#buttonContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
