@@ -12,14 +12,11 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        // 1. Pobranie bieżącej pogody za pomocą XMLHttpRequest
         getCurrentWeather(city);
 
-        // 2. Pobranie prognozy 5-dniowej za pomocą Fetch API
         getWeatherForecast(city);
     });
 
-    // Funkcja do pobrania bieżącej pogody
     function getCurrentWeather(city) {
         const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=pl`;
         const xhr = new XMLHttpRequest();
@@ -29,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (xhr.readyState === 4 && xhr.status === 200) {
                 const data = JSON.parse(xhr.responseText);
                 displayCurrentWeather(data);
+                console.log(data);
             } else if (xhr.readyState === 4) {
                 alert("Nie udało się pobrać bieżącej pogody.");
             }
@@ -36,7 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
         xhr.send();
     }
 
-    // Funkcja do pobrania prognozy 5-dniowej
     function getWeatherForecast(city) {
         const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric&lang=pl`;
 
@@ -47,11 +44,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
                 return response.json();
             })
-            .then(data => displayWeatherForecast(data))
+            .then(data => {console.log(data);displayWeatherForecast(data)})
             .catch(error => alert(error));
+        
     }
 
-    // Wyświetlanie bieżącej pogody
     function displayCurrentWeather(data) {
         const { main, weather, name } = data;
         const description = weather[0].description;
@@ -65,13 +62,12 @@ document.addEventListener("DOMContentLoaded", () => {
         weatherResults.innerHTML = currentWeatherHTML;
     }
 
-    // Wyświetlanie prognozy pogody na 5 dni
     function displayWeatherForecast(data) {
         const forecastHTML = `<h3>Prognoza pogody na 5 dni</h3>`;
         const forecastList = data.list;
 
         let forecastContent = forecastList
-            .filter((_, index) => index % 8 === 0) // Wybieramy jedną prognozę na każdy dzień
+            .filter((_, index) => index % 8 === 0) 
             .map(item => {
                 const date = new Date(item.dt_txt).toLocaleDateString("pl-PL");
                 const temp = item.main.temp;

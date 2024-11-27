@@ -1,30 +1,70 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Lucida Console", Monaco, monospace;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #f4f4f9;
+    background: linear-gradient(120deg, #000000, #444444);
+    color: #ffd700;
+    overflow: hidden;
 }
 
 #weatherApp {
     text-align: center;
-    width: 300px;
+    width: 320px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.7);
+    overflow: hidden;
 }
 
 #addressInput {
-    width: 80%;
-    padding: 8px;
+    width: 85%;
+    padding: 10px;
     margin: 10px 0;
     font-size: 16px;
+    border: 1px solid #ffd700;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #ffd700;
 }
 
 #weatherButton {
-    padding: 8px 12px;
+    padding: 10px 16px;
     font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background: linear-gradient(120deg, #ffd700, #ffcc00);
+    color: #000000;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#weatherButton:hover {
+    background: linear-gradient(120deg, #ffcc00, #ffd700);
 }
 
 #weatherResults {
     margin-top: 20px;
+    font-size: 18px;
+    max-height: 500px;
+    overflow-y: auto;
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: #ffd700 rgba(0, 0, 0, 0.6); /* For Firefox */
+}
+
+#weatherResults::-webkit-scrollbar {
+    width: 8px;
+}
+
+#weatherResults::-webkit-scrollbar-thumb {
+    background-color: #ffd700;
+    border-radius: 4px;
+}
+
+#weatherResults::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 4px;
 }
